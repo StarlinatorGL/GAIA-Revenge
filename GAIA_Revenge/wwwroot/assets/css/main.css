@@ -6,7 +6,7 @@
 /*My Fonts*/
 @font-face {
     font-family: '04b03';
-    src: url('/vendor/bootstrap-icons/fonts/04b03.ttf') format('ttf'); 
+    src: url('/assets/vendor/bootstrap-icons/fonts/04b03.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
