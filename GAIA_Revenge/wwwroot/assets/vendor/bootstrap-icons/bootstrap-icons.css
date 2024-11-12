@@ -7,15 +7,16 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6") format("woff2"),
-url("./fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6") format("woff");
+  src: url("./fonts/04b03.ttf") format("ttf"),
+url("./fonts/04b-03b.ttf") format("ttf"),
+      url("./fonts/04b-03b-extended-regular.ttf") format("ttf");
 }
 
 .bi::before,
 [class^="bi-"]::before,
 [class*=" bi-"]::before {
   display: inline-block;
-  font-family: bootstrap-icons !important;
+  font-family: 04b03 !important;
   font-style: normal;
   font-weight: normal !important;
   font-variant: normal;
