@@ -9,8 +9,8 @@
     font-family: "bootstrap-icons";
     src: url("./fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6") format("woff2"), 
         url("./fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6") format("woff"), 
-        url("./fonts/04b03.ttf") format("ttf"), url("./fonts/04b-03b.ttf") format("ttf"), 
-        url("./fonts/04b-03b-extended-regular.ttf") format("ttf");
+        url("./fonts/04b03.ttf") format('truetype'), url("./fonts/04b-03b.ttf") format('truetype'), 
+        url("./fonts/04b-03b-extended-regular.ttf") format('truetype');
 }
 
 .bi::before,
