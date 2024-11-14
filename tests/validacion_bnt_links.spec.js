@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 test('Validar botones y enlaces en la landing page', async ({ page }) => {
   // Navegar a la Landing Page
-  await page.goto('https://tu-pagina-web.com');
+  await page.goto('https://gaia-revenge.vercel.app/');
 
   // Validar que el botón de "Play" esté presente y funcione
   const playButton = await page.locator('button#play-button');
