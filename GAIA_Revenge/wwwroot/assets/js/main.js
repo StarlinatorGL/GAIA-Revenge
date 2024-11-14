@@ -75,7 +75,7 @@
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      scrollTop.classList.add('active');
     }
   }
   scrollTop.addEventListener('click', (e) => {
@@ -86,7 +86,10 @@
     });
   });
 
-  window.addEventListener('load', toggleScrollTop);
+    window.addEventListener('load', () => {
+        scrollTop.classList.add('active'); // Mostrar el botón al cargar la página
+    });
+
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
