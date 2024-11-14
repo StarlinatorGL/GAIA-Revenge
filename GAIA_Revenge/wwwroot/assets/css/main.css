@@ -634,57 +634,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
-.scroll-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99999;
-    background-color: var(--accent-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
-    max-width: 100%; /* Evita que el botón se salga del ancho de la pantalla */
-}
 
-    .scroll-top i {
-        font-size: 24px;
-        color: var(--contrast-color);
-        line-height: 0;
-    }
-
-    .scroll-top:hover {
-        background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-        color: var(--contrast-color);
-    }
-
-    .scroll-top.active {
-        visibility: visible;
-        opacity: 1;
-    }
-
-/*--------------------------------------------------------------
-    # Movil Scroll Top Button
---------------------------------------------------------------*/
-
-@media (max-width: 800px) {
-    .scroll-top {
-        right: 10px; /* Asegúrate de que esté dentro de la pantalla en móviles */
-        bottom: 10px;
-        width: 35px; /* Ajusta el tamaño si es necesario */
-        height: 35px;
-        max-width: 100%;
-    }
-
-        .scroll-top i {
-            font-size: 20px; /* Reduce el tamaño del icono en móviles si es necesario */
-        }
-}
 
             
  /*--------------------------------------------------------------

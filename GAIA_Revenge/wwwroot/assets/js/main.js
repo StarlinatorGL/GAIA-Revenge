@@ -69,30 +69,6 @@
   }
 
   /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      scrollTop.classList.add('active');
-    }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-    window.addEventListener('load', () => {
-        scrollTop.classList.add('active'); // Mostrar el botón al cargar la página
-    });
-
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
    * Animation on scroll function and init
    */
   function aosInit() {
