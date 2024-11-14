@@ -22,4 +22,4 @@ jobs:
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          lhci autorun --collect.url=http://localhost:5000
+          lhci autorun --collect.url=https://gaia-revenge.vercel.app/
