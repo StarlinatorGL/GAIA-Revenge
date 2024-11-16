@@ -6,6 +6,8 @@
 * License: https://bootstrapmade.com/license/
 */
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 (function() {
   "use strict";
 
