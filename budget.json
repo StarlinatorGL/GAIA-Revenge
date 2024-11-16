@@ -1,0 +1,12 @@
+{
+  "budget": [
+    {
+      "resourceSizes": [
+        {
+          "resourceType": "all",
+          "budget": 1500000
+        }
+      ]
+    }
+  ]
+}

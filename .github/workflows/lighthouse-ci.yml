@@ -1,19 +1,37 @@
-name: Lighthouse Check
-on: [pull_request]
+name: Lighthouse CI
+
+on:
+  push:
+    branches:
+      - master  # Cambia esto si trabajas con otras ramas
+  pull_request:
+    branches:
+      - master  # Cambia esto si trabajas con otras ramas
 
 jobs:
-  lighthouse-check:
+  lighthouse:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@master
-    - run: mkdir /tmp/artifacts
-    - name: Run Lighthouse
-      uses: foo-software/lighthouse-check-action@master
-      with:
-        outputDirectory: /tmp/artifacts
-        urls: 'https://gaia-revenge.vercel.app/'
-    - name: Upload artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: Lighthouse reports
-        path: /tmp/artifacts
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Blazor WebAssembly project
+        run: |
+          dotnet publish -c Release -o ./output
+          # Si necesitas mover o copiar algún archivo adicional de tu proyecto, hazlo aquí.
+
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://gaia-revenge.vercel.app/  # La URL de tu sitio en Vercel
+          budgetPath: ./budget.json  # Si tienes un presupuesto de rendimiento
+          uploadArtifacts: true  # Guarda los resultados como artefactos de acción
+          temporaryPublicStorage: true  # Sube el reporte a almacenamiento temporal
+
+      - name: Upload Lighthouse Report as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-report
+          path: ./lighthouse-report  # Ruta de los resultados de Lighthouse
