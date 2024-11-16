@@ -1,12 +1,15 @@
-{
-  "budget": [
-    {
-      "resourceSizes": [
-        {
-          "resourceType": "all",
-          "budget": 1500000
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "path": "/*",
+    "resourceSizes": [
+      {
+        "resourceType": "document",
+        "budget": 18
+      },
+      {
+        "resourceType": "total",
+        "budget": 200
+      }
+    ]
+  }
+]
