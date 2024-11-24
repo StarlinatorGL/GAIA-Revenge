@@ -1391,3 +1391,57 @@ h6 {
     .starter-section {
         /* Add your styles here */
     }
+
+
+/*-----------------------------------------------------------------
+    # Google Translate
+-----------------------------------------------------------------*/
+
+/* Contenedor del widget */
+#google_translate_element {
+    text-align: right;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+    /* Hover para darle un toque interactivo */
+    #google_translate_element:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+
+/* Personalización del selector */
+.goog-te-combo {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Oculta barra de herramientas de Google */
+.goog-te-banner-frame {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+}
+
+@media (max-width: 768px) {
+    #google_translate_element {
+        width: auto;
+        padding: 5px;
+    }
+
+        #google_translate_element .goog-te-combo {
+            width: 100%;
+        }
+}
